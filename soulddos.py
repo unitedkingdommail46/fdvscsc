@@ -14,7 +14,7 @@ from threading import Thread
 loop = asyncio.get_event_loop()
 
 TOKEN = '8183386561:AAF6emBaDVV9GY6mCyAtNNhIDejQRNQacKo'
-MONGO_URI = 'mongodb+srv://rues:ipxkingyt@rues.ncljp.mongodb.net/?retryWrites=true&w=majority&appName=rues'
+MONGO_URI = 'mongodb+srv://rishi:ipxkingyt@rishiv.ncljp.mongodb.net/?retryWrites=true&w=majority&appName=rishiv'
 FORWARD_CHANNEL_ID = -1002489489807
 CHANNEL_ID = -1002489489807
 error_channel_id = -1002489489807
@@ -22,7 +22,7 @@ error_channel_id = -1002489489807
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 
 client = MongoClient(MONGO_URI, tlsCAFile=certifi.where())
-db = client['rues']
+db = client['rishi']
 users_collection = db.users
 
 bot = telebot.TeleBot(TOKEN)
@@ -79,7 +79,7 @@ def check_user_approval(user_id):
     return False
 
 def send_not_approved_message(chat_id):
-    bot.send_message(chat_id, "*YOU ARE NOT APPROVED BUY ACCESS:-@RuesOwner*", parse_mode='Markdown')
+    bot.send_message(chat_id, "*YOU ARE NOT APPROVED BUY ACESS:-@KRISHNAVIPOWNER*", parse_mode='Markdown')
 
 @bot.message_handler(commands=['approve', 'disapprove'])
 def approve_or_disapprove_user(message):
@@ -252,7 +252,7 @@ def handle_message(message):
         bot.reply_to(message, "*🚀Attack Selected*", parse_mode='Markdown')
         attack_command(message)
     elif message.text == "💼ResellerShip":
-        bot.send_message(message.chat.id, "*FOR RESSELER SHIP DM :-@RuesOwner*", parse_mode='Markdown')
+        bot.send_message(message.chat.id, "*FOR RESSELER SHIP DM :-@KRISHNAVIPOWNER*", parse_mode='Markdown')
     elif message.text == "ℹ️ My Info":
         user_id = message.from_user.id
         user_data = users_collection.find_one({"user_id": user_id})
@@ -288,7 +288,7 @@ def handle_message(message):
 if __name__ == "__main__":
     asyncio_thread = Thread(target=start_asyncio_thread, daemon=True)
     asyncio_thread.start()
-    logging.info("RUES SERVER RUNNING.....")
+    logging.info("KRISHNA SERVER RUNNING.....")
     while True:
         try:
             bot.polling(none_stop=True)
