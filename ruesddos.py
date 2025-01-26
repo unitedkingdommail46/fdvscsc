@@ -14,7 +14,7 @@ from threading import Thread
 loop = asyncio.get_event_loop()
 
 TOKEN = '8183386561:AAF6emBaDVV9GY6mCyAtNNhIDejQRNQacKo'
-MONGO_URI = 'mongodb+srv://rishi:ipxkingyt@rishiv.ncljp.mongodb.net/?retryWrites=true&w=majority&appName=rishiv'
+MONGO_URI = 'mongodb+srv://rues:ipxkingyt@rues.ncljp.mongodb.net/?retryWrites=true&w=majority&appName=rues'
 FORWARD_CHANNEL_ID = -1002489489807
 CHANNEL_ID = -1002489489807
 error_channel_id = -1002489489807
@@ -22,7 +22,7 @@ error_channel_id = -1002489489807
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 
 client = MongoClient(MONGO_URI, tlsCAFile=certifi.where())
-db = client['rishi']
+db = client['rues']
 users_collection = db.users
 
 bot = telebot.TeleBot(TOKEN)
