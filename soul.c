@@ -72,7 +72,7 @@ int main(int argc, char* argv[]) {
         pthread_join(threads[i], NULL);
     }
 
-    printf("FUCKED ATTACK @SOULCRACKS HOST IP %s on port %d for %d seconds\n",
+    printf("FUCKED ATTACK @RuesOwner HOST IP %s on port %d for %d seconds\n",
            params.ip, params.port, params.duration);
 
     return 0;
