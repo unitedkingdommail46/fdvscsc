@@ -79,7 +79,7 @@ def check_user_approval(user_id):
     return False
 
 def send_not_approved_message(chat_id):
-    bot.send_message(chat_id, "*YOU ARE NOT APPROVED BUY ACESS:-@KRISHNAVIPOWNER*", parse_mode='Markdown')
+    bot.send_message(chat_id, "*YOU ARE NOT APPROVED BUY ACCESS:-@RuesOwner*", parse_mode='Markdown')
 
 @bot.message_handler(commands=['approve', 'disapprove'])
 def approve_or_disapprove_user(message):
